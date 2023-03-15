@@ -1,3 +1,5 @@
+import { display } from "./httpdisplay.js";
+
 var requestType;
 document.addEventListener('DOMContentLoaded', init);
 
@@ -54,18 +56,4 @@ function httpRequest(event){
     }
     theRequest.send(formData);
     theRequest.addEventListener("load", display);
-    console.log(requestType);
-}
-
-function display() {
-    let response = document.getElementById("response");
-    let data = JSON.parse(this.responseText);
-  
-    let formattedOutput = JSON.stringify(data, null, 2);
-    response.innerHTML = "<pre>" + formattedOutput + "</pre>";
-
-    let preFormattedOutput = response.querySelector("pre");
-    if (preFormattedOutput.childNodes.length !== 0) {
-      preFormattedOutput.style.padding = "1rem";
-    }
 }
