@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript/methodtest.js"></script>
+    <title>Method Test</title>
+    <style>
+        label, input, textarea {
+            display: block;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Method Test</h1>
+        <form id="entryform">
+            <label for="id">ID: </label>
+            <input type="number" id="id" name="id">
+            <br>
+            <label for="article_name">Article Name: </label>
+            <input type="text" id="article_name" name="article_name">
+            <br>
+            <label for="article_body">Article Body: </label>
+            <textarea id="article_body" name="article_body"></textarea>
+            <br>
+            <button id="postBtn">POST</button>
+            <button id="getBtn">GET</button>
+            <button id="putBtn">PUT</button>
+            <button id="deleteBtn">DELETE</button>
+        </form>
+
+        <h2>Output</h2>
+        <output id="response"></output>
+    </main>
+</body>
+
+</html>
